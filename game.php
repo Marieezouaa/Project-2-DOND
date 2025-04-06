@@ -1,5 +1,8 @@
 <!--User will be brought here from the welcome page-->
-
+<?php
+    $prices = [.01, 1, 5, 10, 25, 50, 75, 100, 200, 300, 400, 500, 750, 1000, 5000, 10000, 25000,
+            50000, 75000, 100000, 200000, 300000, 400000, 500000, 750000, 1000000];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +17,16 @@
     <img src="assets/images/brief-case.png" alt="">
 
     <div id="main-content">
-        <p> Dead or no deal</p>
+        <p> Deal or No Deal</p>
 
         <div id="game-main-content">
-
 
 
             <div id="left-prices">
                 <?php
 
-                for ($i = 0; $i < 14; $i++){
-                        echo '<div class="price-container"> </div>';
+                for ($i = 0; $i < 13; $i++) {
+                        echo '<div class="price-container">' . "$" . number_format($prices[$i]) . '</div>';
                     }
 
                 ?>
@@ -36,12 +38,11 @@
 
                 for ($i = 0; $i < 3; $i++){
                         echo '<div class="price-container"> 
-                        
                          <img src="assets/images/brief-case.png" alt="">
                          <img src="assets/images/brief-case.png" alt="">
-                          <img src="assets/images/brief-case.png" alt="">
-                           <img src="assets/images/brief-case.png" alt="">
-                            <img src="assets/images/brief-case.png" alt="">
+                         <img src="assets/images/brief-case.png" alt="">
+                         <img src="assets/images/brief-case.png" alt="">
+                         <img src="assets/images/brief-case.png" alt="">
                         </div>';
                     }
 
@@ -53,8 +54,8 @@
 
                 <?php
 
-                for ($i = 0; $i < 14; $i++){
-                        echo '<div class="price-container"> </div>';
+                for ($i = 13; $i < 26; $i++){
+                        echo '<div class="price-container">' . "$" . number_format($prices[$i]) . '</div>';
                     }
 
                 ?>

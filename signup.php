@@ -1,8 +1,12 @@
 <?php
-
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
+   // $_SESSION['name'] = $name;
+    
+    $firstNlast = explode(" ", $name);
+    $firstName = $firstNlast[0];
 }
 ?>
 <!DOCTYPE html>
@@ -19,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div id="main-content">
 
-
-        <p id="ready">Are you ready to play?</p>
+        <p id="ready">Hey, <?php echo $firstName?>! Are you ready to play?</p>
 
         <img id="dond-logo" src="assets/images/dond-logo.jpeg" alt="">
 
@@ -32,10 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </a>
 
-
-            <div id="submit-btn-container">
-                <button class="option-btn" id="view-rules-btn" type="submit">Rules</button>
-            </div>
+            <a href="rules.html">
+                <div id="submit-btn-container">
+                    <button class="option-btn" id="view-rules-btn" type="submit">Rules</button>
+                </div>
+            </a>
             <div id="submit-btn-container">
                 <button class="option-btn" id="view-creators-btn" type="submit">Creators</button>
             </div>

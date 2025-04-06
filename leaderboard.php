@@ -1,6 +1,10 @@
 <!--We can use this page for the leaderboard logic-->
 <?php
+session_start();
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+    }
 ?>
 
 <!DOCTYPE html>
