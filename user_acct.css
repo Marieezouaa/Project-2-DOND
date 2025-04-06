@@ -1,0 +1,85 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(assets/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#main-content {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.537);
+}
+
+h1,
+h2 {
+  color: gold;
+}
+
+h1 {
+  font-size: 45pt;
+  text-align: center;
+}
+h2 {
+  font-size: 20pt;
+}
+
+/**************************FORM STYLES***************************/
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+}
+label {
+  display: inline-block;
+  min-width: 150px; /* Adjust based on your needs */
+  max-width: 150px;
+  text-align: left;
+  width: 50px;
+}
+input {
+  margin: 10px;
+  width: 250px;
+  height: 30px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: #525e37;
+  color: gold;
+  font-size: 12px;
+  border: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
