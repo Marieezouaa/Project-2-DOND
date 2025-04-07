@@ -1,7 +1,19 @@
 <!--User will be brought here from the welcome page-->
 <?php
     $prices = [.01, 1, 5, 10, 25, 50, 75, 100, 200, 300, 400, 500, 750, 1000, 5000, 10000, 25000,
-            50000, 75000, 100000, 200000, 300000, 400000, 500000, 750000, 1000000];
+            50000, 75000, 100000, 200000, 300000, 400000, 500000, 750000, 1000000];      
+    if (isset($_POST['score'])) {
+        $earnings = $_POST['score'];
+        setcookie("earnings", $earnings, time() + 3600 + 24 + 30);
+    }
+    if (isset($_COOKIE['name']) && (isset($_COOKIE['earnings']))) {
+        $name = $_COOKIE['name'];
+        $earnings = $_COOKIE['earnings'];
+        
+        $file = 'leaderboard.txt';
+        $leaderboardEntry = "$name, $earnings\n";
+        file_put_contents($file, $leaderboardEntry, FILE_APPEND);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,12 +1,11 @@
 <?php
-session_start();
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
-   // $_SESSION['name'] = $name;
+    setcookie('name', $name, time() + 3600 * 24 * 30);
     
     $firstNlast = explode(" ", $name);
     $firstName = $firstNlast[0];
+    
 }
 ?>
 <!DOCTYPE html>
@@ -23,7 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div id="main-content">
 
-        <p id="ready">Hey, <?php echo $firstName?>! Are you ready to play?</p>
+        <p id="ready">Hey<?php 
+        if (!empty($firstName)) {
+            echo ", " . $firstName . "! Are you ready to play?</p>";
+        } else {
+            echo "! Are you ready to play?</p>";
+        }
+        ?>
 
         <img id="dond-logo" src="assets/images/dond-logo.jpeg" alt="">
 
