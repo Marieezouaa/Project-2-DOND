@@ -189,6 +189,14 @@ p, pre{
   border: solid 10px black;
 }
 
+#bottom-case-area {
+  display: flex;
+  align-items: center;
+  border: 3px solid rgb(189, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+}
+
 #left-prices,
 #right-prices {
   display: flex;
@@ -208,4 +216,35 @@ p, pre{
   box-shadow: 0 0 10px rgba(253, 253, 82, 0.827);
   border: solid 3px rgb(189, 188, 188);
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cases {
+  width: 80%;
+  height: auto;
+}
+
+.case-and-number {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.case-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.case-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 2%;
 }
