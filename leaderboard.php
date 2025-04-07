@@ -1,18 +1,23 @@
 <!--We can use this page for the leaderboard logic-->
 <?php
-    /* if (isset($_COOKIE['name']) && (isset($_COOKIE['earnings']))) {
+    if (isset($_POST['score'])) { 
+        $earnings = $_POST['score'];
+        setcookie("earnings", $earnings, time() + 3600 + 24 + 30);
+    }
+    if (isset($_COOKIE['name']) && (isset($_COOKIE['earnings']))) {
         $name = $_COOKIE['name'];
         $earnings = $_COOKIE['earnings'];
         
         $file = 'leaderboard.txt';
         $leaderboardEntry = "$name, $earnings\n";
         file_put_contents($file, $leaderboardEntry, FILE_APPEND);
-    } */
+    } 
     $file = 'leaderboard.txt';
     if (file_exists($file)) {
         $data = file_get_contents($file);
         $lines = explode("\n", $data);
         $leaderboard = [];
+        
 
         for ($i = 0; $i < count($lines); $i++) {
             list($name, $earnings) = explode(",", $lines[$i]);
