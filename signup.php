@@ -45,9 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <button class="option-btn" id="view-rules-btn" type="submit">Rules</button>
                 </div>
             </a>
-            <div id="submit-btn-container">
-                <button class="option-btn" id="view-creators-btn" type="submit">Creators</button>
-            </div>
+            <a href="creators.html">
+                <div id="submit-btn-container">
+                    <button class="option-btn" id="view-creators-btn" type="submit">Creators</button>
+                </div>
+            </a>
         </div>
 
     </div>
