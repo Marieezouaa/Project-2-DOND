@@ -72,7 +72,7 @@ h3 {
   text-decoration: none;
   color: white;
 }
-#arrow {
+#arrow, #home {
   background-color: gold;
   border-radius: 20%;
   width: 3%;
@@ -84,9 +84,29 @@ h3 {
   align-items: center;
   margin-left: 5%;
 }
-#arrow img {
+#arrow img, #home img {
   width: 100%;
   height: 100%;
+}
+table {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  margin: 5%;
+}
+th {
+  font-size: 20pt
+}
+tr {
+  padding: 5%;
+}
+tr:nth-child(odd) {
+  background-color: gold;
+  color: green;
+}
+tr:nth-child(even) {
+  background-color: green;
+  color: gold;
 }
 
 /*****************************MENU STYLES*********************************/
